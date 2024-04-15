@@ -1,9 +1,11 @@
-const redis = require('redis');
+const redis = require("redis");
 
 class RedisClient {
   constructor() {
     this.client = redis.createClient();
-    this.client.on('error', (error) => console.error(`Redis client error: ${error}`));
+    this.client.on("error", (error) =>
+      console.error(`Redis client error: ${error}`)
+    );
   }
 
   isAlive() {
